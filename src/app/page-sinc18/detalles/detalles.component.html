@@ -1,15 +1,31 @@
-<div>
-  <div>
-    <h2>titulo: {{ObjetoLlamado[idConvert-1].title}}</h2>
+<div class="border rounded-md p-4 tabla bg-yellow-200">
+  <div  >
+    <h2 class="text-xl font-bold">titulo: </h2>
+  </div>
+  <div  >
+    {{ObjetoLlamado[idConvert-1].title}}
   </div>
   <div>
-    <span>id del usuario: {{ObjetoLlamado[idConvert-1].userId}}</span>
+    <span class="text-xl font-bold">UserId: </span>
   </div>
   <div>
-    <span>id: {{idConvert}}</span>
+    {{ObjetoLlamado[idConvert-1].userId}}
   </div>
   <div>
-    <span>estado: {{ObjetoLlamado[idConvert-1].completed}}</span>
-    <span></span>
+    <span class="text-xl font-bold">id: </span>
+  </div>
+  <div>
+    {{idConvert}}
+  </div>
+  <div>
+    <span class="text-xl font-bold">estado: </span>
+  </div>
+  <div class="">
+    <span class="font-bold" [ngClass]="ObjetoLlamado[idConvert-1].completed? 'text-green-500':'text-red-500'">
+      {{ObjetoLlamado[idConvert-1].completed}}
+    </span>
+  </div>
+  <div class="flex justify-center">
+    <button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow" (click)="back()">Back</button>
   </div>
 </div>

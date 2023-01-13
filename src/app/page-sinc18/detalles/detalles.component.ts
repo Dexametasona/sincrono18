@@ -14,6 +14,9 @@ export class DetallesComponent implements OnInit {
 
 
   constructor(private router:Router, private route:ActivatedRoute, private data:DataService) { }
+  back(){
+    this.router.navigate(['/home'])
+  }
 
   ngOnInit(): void {
     this.id = this.route.snapshot.paramMap.get('id');

@@ -1,0 +1,15 @@
+:host{
+    display: block;
+    box-sizing: border-box;
+    width: 40%;
+    margin: auto;
+    padding-top: 20px;
+}
+.tabla{
+    display: grid;
+    grid-template: repeat(5, 3rem)/1fr 3fr ;
+    align-items: baseline;
+}
+.flex{
+    grid-column: span 2;
+}

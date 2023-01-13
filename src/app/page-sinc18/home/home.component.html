@@ -1,15 +1,16 @@
-<table>
+<table class="w-1/2 mx-auto">
   <thead>
-    <tr>
+    <tr class="bg-gray-500">
       <th>ID</th>
       <th>Nombre</th>
+      <th>Accion</th>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let x of BBDD">
-      <td>{{x.id}}</td>
-      <td>{{x.title}}</td>
-      <td><button (click)="consulta(x.id)">consultar</button></td>
+    <tr *ngFor="let x of BBDD" class="border-b border-gray-500">
+      <td class="pl-5">{{x.id}}</td>
+      <td class="pl-10">{{x.title}}</td>
+      <td class="pl-10 py-1"><button (click)="consulta(x.id)" class="bg-white hover:bg-gray-100 text-gray-800 font-semibold px-2 border border-gray-400 rounded shadow">consultar</button></td>
     </tr>
   </tbody>
 </table>
