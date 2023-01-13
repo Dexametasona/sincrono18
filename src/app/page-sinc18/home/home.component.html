@@ -1,1 +1,14 @@
-<p>home works!</p>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let x of BBDD">
+      <td>{{x.userId}}</td>
+      <td>{{x.title}}</td>
+    </tr>
+  </tbody>
+</table>

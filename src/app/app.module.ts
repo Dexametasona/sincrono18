@@ -1,3 +1,5 @@
+import { HttpClientModule } from '@angular/common/http';
+import { DataService } from './service/data.service';
 import { PageSinc18Module } from './page-sinc18/page-sinc18.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -12,9 +14,10 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    PageSinc18Module
+    PageSinc18Module,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

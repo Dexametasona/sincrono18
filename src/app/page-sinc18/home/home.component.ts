@@ -1,3 +1,4 @@
+import { DataService } from './../../service/data.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
-  constructor() { }
+  BBDD!:any
+  constructor(private data:DataService) { }
 
   ngOnInit(): void {
+    this.data.BD().subscribe(x=>this.BBDD=x);
+    this.BBDD=JSON.parse(this.BBDD)
+    
   }
 
 }
