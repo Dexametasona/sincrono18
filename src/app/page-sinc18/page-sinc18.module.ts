@@ -14,7 +14,8 @@ import { DetallesComponent } from './detalles/detalles.component';
     CommonModule
   ],
   exports:[
-    HomeComponent
+    HomeComponent,
+    DetallesComponent
   ]
 })
 export class PageSinc18Module { }
